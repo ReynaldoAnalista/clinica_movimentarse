@@ -3,13 +3,13 @@
 @section('content_header')
     <div class="row">
         <div class="col-md-12">
-            <a href="index" class="btn btn-warning"><span class='glyphicon glyphicon-arrow-left'/> Voltar</a>
+            <a href="{{ URL::route('paciente/index') }}" class="btn btn-warning"><span class='glyphicon glyphicon-arrow-left'/> Voltar</a>
         </div>
     </div>
 @stop
 
 @section('content')
-{{ Form::open(array('url' => 'paciente/store', 'method' => 'post', 'id' => 'FormPaciente')) }}
+{{ Form::open(array('url' => 'paciente/update', 'method' => 'post', 'id' => 'FormPaciente')) }}
     <input type="hidden" name="id" value='{{ $paciente->id }}'/>
     <div class="row">
         <div class="col-md-12 form-group">

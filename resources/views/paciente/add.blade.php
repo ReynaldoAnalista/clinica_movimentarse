@@ -3,14 +3,14 @@
 @section('content_header')
     <div class="row">
         <div class="col-md-12">
-            <a href='index' class="btn btn-warning"><span class='glyphicon glyphicon-arrow-left'/> Voltar</a>
+            <a href="{{ URL::route('paciente/index') }}" class="btn btn-warning"><span class='glyphicon glyphicon-arrow-left'/> Voltar</a>
         </div>
     </div>
 @stop
 
 
 @section('content')
-{{ Form::open(array('url' => 'paciente/add', 'method' => 'post', 'id' => 'FormPaciente')) }}
+{{ Form::open(array('url' => 'paciente/create', 'method' => 'post', 'id' => 'FormPaciente')) }}
     <div class="row">
         <div class="col-md-12 form-group">
             <label for="nm_paciente">Nome:</label>
@@ -80,8 +80,8 @@
             <label for="id_tipo_atendimento">Tipo de Atendimento:</label>
             <select name="id_tipo_atendimento" class="form-control">
                 <option value="">Selecione</option>
-                <option value="0">Particular</option>
-                <option value="1">Convênio</option>
+                <option value="1">Particular</option>
+                <option value="2">Convênio</option>
             </select>
         </div>
         <div class="col-md-3">

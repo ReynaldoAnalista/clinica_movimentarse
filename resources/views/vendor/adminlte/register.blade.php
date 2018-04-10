@@ -20,7 +20,7 @@
 
                 <div class="form-group has-feedback {{ $errors->has('name') ? 'has-error' : '' }}">
                     <input type="text" name="name" class="form-control" value="{{ old('name') }}"
-                           placeholder="{{ trans('adminlte::adminlte.full_name') }}">
+                           placeholder="Login">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     @if ($errors->has('name'))
                         <span class="help-block">
@@ -28,16 +28,16 @@
                         </span>
                     @endif
                 </div>
-                <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
-                    <input type="email" name="email" class="form-control" value="{{ old('email') }}"
-                           placeholder="{{ trans('adminlte::adminlte.email') }}">
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                    @endif
-                </div>
+                <!--<div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">-->
+                <!--    <input type="email" name="email" class="form-control" value="{{ old('email') }}"-->
+                <!--           placeholder="{{ trans('adminlte::adminlte.email') }}">-->
+                <!--    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>-->
+                <!--    @if ($errors->has('email'))-->
+                <!--        <span class="help-block">-->
+                <!--            <strong>{{ $errors->first('email') }}</strong>-->
+                <!--        </span>-->
+                <!--    @endif-->
+                <!--</div>-->
                 <div class="form-group has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
                     <input type="password" name="password" class="form-control"
                            placeholder="{{ trans('adminlte::adminlte.password') }}">

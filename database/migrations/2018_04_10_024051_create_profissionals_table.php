@@ -14,9 +14,7 @@ class CreateProfissionalsTable extends Migration
     public function up()
     {
         Schema::create('profissionals', function (Blueprint $table) {
-            $table->increments('id_profissional');
-            $table->string('nm_profissional');
-            $table->integer('id_tp_profissional');
+            $table->increments('id');
             $table->timestamps();
         });
     }

@@ -3,7 +3,7 @@
 @section('content_header')
     <div class="row">
         <div class="col-md-12">
-            <a href="{{ Request::url()}}/index" class="btn btn-warning"><span class='glyphicon glyphicon-arrow-left'/> Voltar</a>
+            <a href="{{ URL::route('paciente/index') }}" class="btn btn-warning"><span class='glyphicon glyphicon-arrow-left'/> Voltar</a>
         </div>
     </div>
 @stop

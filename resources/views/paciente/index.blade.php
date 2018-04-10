@@ -9,6 +9,8 @@
 @stop
 
 @section('content')
+
+
 <div class="row">
     <div class="col-md-12">
         <table class='table table-bordered table-hover'>
@@ -26,7 +28,7 @@
                 <tr class='text-center'>
                     
                     <td>{{ $paciente->nm_paciente }}</td>
-                    <td class='dt_nascimento'>{{ $paciente->dt_nascimento_paciente }}</td>
+                    <td>{{ $paciente->dt_nascimento_paciente }}</td>
                     <td>{{ $paciente->tipo_atendimento->ds_tipo_atendimento }}</td>
                     <td>{{ $paciente->nu_telefone }}</td>
                     <td>
@@ -36,7 +38,7 @@
                         <a href='view/{{ $paciente->id }}' title='Visualizar' class='btn btn-sm btn-primary'>
                             <span class='glyphicon glyphicon-tasks' />
                         </a>
-                        <a title='Remover' class='btn btn-sm btn-danger'>
+                        <a href='delete/{{ $paciente->id }}'  title='Remover' class='btn btn-sm btn-danger'>
                             <span class='glyphicon glyphicon-remove' />
                         </a>
                     </td>
@@ -53,9 +55,9 @@
     <script>
         $(function(){
             
-            $('.dt_nascimento').each(function(){
-              $(this).text(moment($(this).text()).format('D/M/Y'))  
-            });
+            // $('.dt_nascimento').each(function(){
+            //   $(this).text(moment($(this).text()).format('D/M/Y'))  
+            // });
           
         });
     </script>

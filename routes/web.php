@@ -25,10 +25,15 @@ Route::get('paciente/add', 'PacienteController@add');
 
 Route::post('paciente/add', 'PacienteController@add');
 
+Route::post('paciente/create', 'PacienteController@create');
+
 Route::get('paciente/edit/{id}', 'PacienteController@edit');
 Route::post('paciente/edit/{id}', 'PacienteController@edit');
 
-Route::post('paciente/store', 'PacienteController@store');
+Route::get('paciente/delete/{id}', 'PacienteController@delete');
+Route::post('paciente/delete/{id}', 'PacienteController@delete');
+
+Route::post('paciente/update', 'PacienteController@update');
 
 Route::get('paciente/view/{id}', 'PacienteController@view');
 
