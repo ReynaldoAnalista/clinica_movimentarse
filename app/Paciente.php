@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Carbon\Carbon;
+
 class Paciente extends Model
 {
     
@@ -17,7 +19,7 @@ class Paciente extends Model
     
     public function setDtNascimentoPacienteAttribute($value)
     {
-        $data = new \DateTime($value);
+        $data = Carbon::createFromFormat('d/m/Y', $value);
         $this->attributes['dt_nascimento_paciente'] = $data->format("Y-m-d");
     }
     

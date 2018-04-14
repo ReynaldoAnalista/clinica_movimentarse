@@ -13,9 +13,6 @@ class PacienteController extends Controller
 {
     public function index(){
         $pacientes = Paciente::all();
-        
-        // dd($pacientes);
-        
         return view('paciente/index', compact('pacientes'));
     }
     
@@ -30,6 +27,7 @@ class PacienteController extends Controller
     
     
     public function create(Request $request) {
+        
         if(Paciente::create($request->all())) {
             flash('Paciente salvo com sucesso.')->success();    
             return redirect()->route('paciente/index');
@@ -40,11 +38,8 @@ class PacienteController extends Controller
     }
     
     public function update(Request $request) {
-        
-         $request->offsetUnset('_token');
-         
-         dd($request->all());
-        
+    
+        $request->offsetUnset('_token');
         if(Paciente::where('id', $request->id)->update($request->all())) {
             flash('Paciente salvo com sucesso.')->success();    
             return redirect()->route('paciente/index');

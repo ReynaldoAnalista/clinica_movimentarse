@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title_prefix', config('adminlte.title_prefix', ''))
-@yield('title', config('adminlte.title', 'AdminLTE 2'))
+@yield('title', config('adminlte.title', 'Clinica Movimentarse'))
 @yield('title_postfix', config('adminlte.title_postfix', ''))</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -15,8 +15,9 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/Ionicons/css/ionicons.min.css') }}">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
+    <link rel="stylesheet" href="{{ asset('js/bootstrap-datepicker/dist/css/bootstrap-datepicker.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('js/fullcalendar/dist/fullcalendar.min.css') }}">
 
     @if(config('adminlte.plugins.select2'))
         <!-- Select2 -->
@@ -64,21 +65,25 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
 @endif
 
-@if(config('adminlte.plugins.bootstrap-datepicker'))
-    <script src="/clinica/public/vendor/adminlte/vendor/bootstrap-datepicker/bootstrap-datepicker-built.js"></script>
-@endif
-
 @if(config('adminlte.plugins.bootstrap-validator'))
-    <script src="/clinica/public/vendor/adminlte/vendor/bootstrap-validator/js/validator.js"></script>
+    <script src="{{ asset('js/bootstrap-validator/dist/validator.min.js') }}"></script>
 @endif
 
 @if(config('adminlte.plugins.jquery_mask'))
-    <script src="/clinica/public/vendor/adminlte/vendor/jquery_mask/src/jquery.mask.js"></script>
+    <script src="{{ asset('js/jquery_mask/src/jquery.mask.js') }}"></script>
 @endif
 
+@if(config('adminlte.plugins.bootstrap-datepicker'))
+    <script src="{{ asset('js/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+@endif
+
+
+@if(config('adminlte.plugins.moment'))
+    <script src="{{ asset('js/moment/moment.js') }}"></script>
+@endif    
+
 @if(config('adminlte.plugins.calendar'))
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-    <script src="/clinica/public/vendor/adminlte/vendor/moment/moment.js"></script>
+    <script src="{{ asset('js/fullcalendar/dist/fullcalendar.min.js') }}"></script>
 @endif
 
 @yield('adminlte_js')

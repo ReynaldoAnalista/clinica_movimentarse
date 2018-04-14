@@ -1,0 +1,20 @@
+{
+    "name": "snpt/bootstrap-datepicker",
+    "description": "A datepicker for Bootstrap forked from eternicode/bootstrap-datepicker",
+    "license": "Apache-2.0",
+    "keywords": [
+        "bootstrap",
+        "datepicker"
+    ],
+    "authors": [
+        {
+            "name": "Andrew Rowls",
+            "email": "eternicode@gmail.com"
+        },
+        {
+            "name": "Community",
+            "homepage": "https://github.com/eternicode/bootstrap-datepicker/contributors"
+        }
+    ],
+    "type": "component"
+}

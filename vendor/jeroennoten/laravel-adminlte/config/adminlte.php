@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '',
 
     'logout_url' => 'logout',
 
@@ -116,12 +116,12 @@ return [
         ],
         [
             'text' => 'Profissionais',
-            'url'  => 'profissional/index',
+            'url'  => 'profissional',
             'icon' => 'users',
         ],
         [
             'text' => 'Horários',
-            'url'  => 'horario/index',
+            'url'  => 'horario',
             'icon' => 'calendar',
         ],
     ],
@@ -165,5 +165,6 @@ return [
         'bootstrap-validator' => true,
         'jquery_mask' => true,
         'calendar' => true,
+        'moment' => true
     ],
 ];

@@ -1,0 +1,12 @@
+#tbl_horarios {
+    background-color: #ededed;
+}
+
+#tbl_horarios > thead > tr >th {
+    text-align: center;
+    background-color: #8bf998;
+}
+
+#tbl_horarios > tbody > tr > td {
+    text-align: center;
+}

@@ -1,5 +1,9 @@
 @extends('adminlte::page')
 
+@section('title')
+    Movimentarse - Pacientes
+@endsection
+
 @section('content_header')
     <div class="row">
         <div class="col-md-12">
@@ -13,6 +17,7 @@
 
 <div class="row">
     <div class="col-md-12">
+        @if (count($pacientes) > 0)
         <table class='table table-bordered table-hover'>
             <thead>
                 <tr class='text-center'>
@@ -46,19 +51,8 @@
                 @endforeach
             </tbody>
         </table>
+        @endif
     </div>
 </div>
 
-@stop
-
-@section('js')
-    <script>
-        $(function(){
-            
-            // $('.dt_nascimento').each(function(){
-            //   $(this).text(moment($(this).text()).format('D/M/Y'))  
-            // });
-          
-        });
-    </script>
 @stop

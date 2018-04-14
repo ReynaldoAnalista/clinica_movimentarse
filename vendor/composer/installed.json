@@ -1,5 +1,94 @@
 [
     {
+        "name": "1000hz/bootstrap-validator",
+        "version": "v0.11.9",
+        "version_normalized": "0.11.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EvilFreelancer/bootstrap-validator.git",
+            "reference": "dfa97d6cbde5255010ac398fa4628d62ed2b1f67"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/EvilFreelancer/bootstrap-validator/zipball/dfa97d6cbde5255010ac398fa4628d62ed2b1f67",
+            "reference": "dfa97d6cbde5255010ac398fa4628d62ed2b1f67",
+            "shasum": ""
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/"
+    },
+    {
+        "name": "barryvdh/laravel-debugbar",
+        "version": "v3.1.4",
+        "version_normalized": "3.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/barryvdh/laravel-debugbar.git",
+            "reference": "7a91480cc6e597caed5117a3c5d685f06d35c5a1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/7a91480cc6e597caed5117a3c5d685f06d35c5a1",
+            "reference": "7a91480cc6e597caed5117a3c5d685f06d35c5a1",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/routing": "5.5.x|5.6.x",
+            "illuminate/session": "5.5.x|5.6.x",
+            "illuminate/support": "5.5.x|5.6.x",
+            "maximebf/debugbar": "~1.15.0",
+            "php": ">=7.0",
+            "symfony/debug": "^3|^4",
+            "symfony/finder": "^3|^4"
+        },
+        "require-dev": {
+            "illuminate/framework": "5.5.x"
+        },
+        "time": "2018-03-06T08:35:31+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2-dev"
+            },
+            "laravel": {
+                "providers": [
+                    "Barryvdh\\Debugbar\\ServiceProvider"
+                ],
+                "aliases": {
+                    "Debugbar": "Barryvdh\\Debugbar\\Facade"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Barryvdh\\Debugbar\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Barry vd. Heuvel",
+                "email": "barryvdh@gmail.com"
+            }
+        ],
+        "description": "PHP Debugbar integration for Laravel",
+        "keywords": [
+            "debug",
+            "debugbar",
+            "laravel",
+            "profiler",
+            "webprofiler"
+        ]
+    },
+    {
         "name": "components/bootstrap",
         "version": "3.3.7",
         "version_normalized": "3.3.7.0",
@@ -1416,6 +1505,69 @@
             "s3",
             "sftp",
             "storage"
+        ]
+    },
+    {
+        "name": "maximebf/debugbar",
+        "version": "v1.15.0",
+        "version_normalized": "1.15.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maximebf/php-debugbar.git",
+            "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
+            "reference": "30e7d60937ee5f1320975ca9bc7bcdd44d500f07",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/log": "^1.0",
+            "symfony/var-dumper": "^2.6|^3.0|^4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.0|^5.0"
+        },
+        "suggest": {
+            "kriswallsmith/assetic": "The best way to manage assets",
+            "monolog/monolog": "Log using Monolog",
+            "predis/predis": "Redis storage"
+        },
+        "time": "2017-12-15T11:13:46+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.14-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DebugBar\\": "src/DebugBar/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Maxime Bouroumeau-Fuseau",
+                "email": "maxime.bouroumeau@gmail.com",
+                "homepage": "http://maximebf.com"
+            },
+            {
+                "name": "Barry vd. Heuvel",
+                "email": "barryvdh@gmail.com"
+            }
+        ],
+        "description": "Debug bar in the browser for php application",
+        "homepage": "https://github.com/maximebf/php-debugbar",
+        "keywords": [
+            "debug",
+            "debugbar"
         ]
     },
     {
@@ -3543,6 +3695,44 @@
         ],
         "description": "Library that helps with managing the version number of Git-hosted PHP projects",
         "homepage": "https://github.com/sebastianbergmann/version"
+    },
+    {
+        "name": "snpt/bootstrap-datepicker",
+        "version": "v3.0.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/snpt/bootstrap-datepicker.git",
+            "reference": "36a588bf9e6eb5a70a6b6c7c99b2981a8e2e2a38"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/snpt/bootstrap-datepicker/zipball/36a588bf9e6eb5a70a6b6c7c99b2981a8e2e2a38",
+            "reference": "36a588bf9e6eb5a70a6b6c7c99b2981a8e2e2a38",
+            "shasum": ""
+        },
+        "time": "2017-03-09T11:59:23+00:00",
+        "type": "component",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Andrew Rowls",
+                "email": "eternicode@gmail.com"
+            },
+            {
+                "name": "Community",
+                "homepage": "https://github.com/eternicode/bootstrap-datepicker/contributors"
+            }
+        ],
+        "description": "A datepicker for Bootstrap forked from eternicode/bootstrap-datepicker",
+        "keywords": [
+            "bootstrap",
+            "datepicker"
+        ]
     },
     {
         "name": "sven/artisan-view",

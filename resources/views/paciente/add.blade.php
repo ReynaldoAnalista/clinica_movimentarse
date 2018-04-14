@@ -1,5 +1,9 @@
 @extends('adminlte::page')
 
+@section('title')
+    Movimentarse - Cadastro
+@endsection
+
 @section('content_header')
     <div class="row">
         <div class="col-md-12">
@@ -112,7 +116,10 @@
 @section('js')
     <script>
         $(function(){
-           $('#dt_nasc_paciente').datepicker(); 
+           $('#dt_nasc_paciente').datepicker({
+                format: 'dd/mm/yyyy',                
+                language: 'pt-BR'
+            }); 
            $('#FormPaciente').validator(); 
            $('#nu_telefone').mask("(99)9999-9999");
            $('#nu_celular').mask("(99)99999-9999");

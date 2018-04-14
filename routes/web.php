@@ -27,6 +27,10 @@ Route::post('paciente/add', 'PacienteController@add');
 
 Route::post('paciente/create', 'PacienteController@create');
 
+Route::resource('profissional', 'ProfissionalController');
+
+Route::resource('horario', 'HorarioController');
+
 Route::get('paciente/edit/{id}', 'PacienteController@edit');
 Route::post('paciente/edit/{id}', 'PacienteController@edit');
 
